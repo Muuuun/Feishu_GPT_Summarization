@@ -7,6 +7,32 @@ This project extracts all URLs from a given input text, pre-processed with tagge
 
 整个系统的架构非常简单，主要分为两个部分：一个是群聊监控机器人，另一个是服务器端的OpenAI API接口。当机器人检测到群聊中有新的URL链接时，它会自动将这些链接发送到服务器上，并调用OpenAI API接口对链接中的网页内容进行分析和总结。最终，这些总结会通过机器人再次发送到指定的群聊中。
 
+## 功能测试
+
+当下载完一个 repository 后，可以测试其中的功能，确保它们能够正常工作。以下是一个简单的测试步骤：
+1. 创建一个 Conda 虚拟环境。为了隔离不同的 Python 环境，并避免不同库的版本冲突，我们可以创建一个 Conda 虚拟环境。在终端中，运行以下命令：
+```
+conda create --name summarization
+```
+2. 激活虚拟环境。
+```
+conda activate summarization
+```
+3. 安装依赖项。在虚拟环境中安装需要的依赖项。在终端中，进入 repository 的根目录，并运行以下命令：
+```
+pip install -r requirements.txt
+```
+4. 配置 OpenAI API Key。 在运行 url_summarization.py 文件之前，需要先将 OpenAI API Key 配置为环境变量。在终端中，运行以下命令：
+```
+export OPENAI_API_KEY=<your_api_key>
+```
+5. 测试 url_summarization.py 文件。 在终端中，进入 repository 的根目录，并运行以下命令：
+```
+python url_summarization.py
+```
+随后会出现该界面，输入url后便会返回总结的文本
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/44352089/235720296-ea8f707b-e397-4968-a23a-2c7709369eb2.png">
+
 
 ## 服务器设置
 该项目从带有标注URL的给定输入文本中提取所有URL。通过利用GPT的能力，首先对内容进行概括，然后将最终输出发送到飞书/Lark以供进一步使用。
