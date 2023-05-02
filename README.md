@@ -1,6 +1,13 @@
 # Feishu_GPT_Summarization
 This project extracts all URLs from a given input text, pre-processed with tagged URLs. Utilizing the power of GPT, the content is first summarized, and then the final output is sent to Lark/Feishu for further use.
 
+这个repository是一个通过飞书机器人实现的GPT总结机器人，它可以在话题群中自动检测到发送的URL链接，并将这些链接发送到服务器上。然后，使用OpenAI API接口对这些URL中的网页内容进行分析和总结。这个系统的主要目的是帮助用户节省时间，同时提供一个方便快捷的方式来获取网页内容的摘要。
+
+使用这个repository，用户可以方便地将自己关注的网页内容自动收集到一个指定的位置。这个系统可以帮助用户自动监测网络上的新闻、文章、视频等内容，并将这些内容以简短的方式进行总结，让用户可以快速了解内容的要点。此外，用户也可以根据自己的需要，对这些链接进行过滤和分类。
+
+整个系统的架构非常简单，主要分为两个部分：一个是群聊监控机器人，另一个是服务器端的OpenAI API接口。当机器人检测到群聊中有新的URL链接时，它会自动将这些链接发送到服务器上，并调用OpenAI API接口对链接中的网页内容进行分析和总结。最终，这些总结会通过机器人再次发送到指定的群聊中。
+
+
 ## 服务器设置
 该项目从带有标注URL的给定输入文本中提取所有URL。通过利用GPT的能力，首先对内容进行概括，然后将最终输出发送到飞书/Lark以供进一步使用。
 
