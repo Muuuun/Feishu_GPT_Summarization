@@ -31,7 +31,10 @@ export OPENAI_API_KEY=<your_api_key>
 python url_summarization.py
 ```
 随后会出现该界面，输入url后便会返回总结的文本
-<img width="260" alt="image" src="https://user-images.githubusercontent.com/44352089/235720296-ea8f707b-e397-4968-a23a-2c7709369eb2.png">
+```
+python url_summarization.py
+请输入网址:
+```
 
 
 ## 服务器设置
